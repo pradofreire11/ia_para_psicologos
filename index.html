@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA PARA PSICÓLOGOS — Guia prático | Versão compacta</title><meta name="description" content="Aprenda a usar IA na rotina do consultório com responsabilidade. Guia com 10 capítulos, prompts práticos e dois bônus, por Tereza Raquel Soares do Prado.">
+<style>
+:root{--teal:#078c87;--teal2:#056a67;--gold:#c58d31;--gold2:#f0c96e;--ink:#292d35;--muted:#667078;--cream:#faf9f5;--white:#fff;--line:#e3e1db;--shadow:0 24px 70px rgba(25,30,35,.14)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.62;background:#fff}a{text-decoration:none;color:inherit}.wrap{width:min(1160px,92%);margin:auto}
+.hex-bg{position:relative;overflow:hidden}.hex-bg:before{content:"";position:absolute;inset:0;opacity:.55;background-image:linear-gradient(30deg,rgba(7,140,135,.08) 12%,transparent 12.5%,transparent 87%,rgba(7,140,135,.08) 87.5%,rgba(7,140,135,.08)),linear-gradient(150deg,rgba(7,140,135,.08) 12%,transparent 12.5%,transparent 87%,rgba(7,140,135,.08) 87.5%,rgba(7,140,135,.08)),linear-gradient(30deg,rgba(7,140,135,.08) 12%,transparent 12.5%,transparent 87%,rgba(7,140,135,.08) 87.5%,rgba(7,140,135,.08)),linear-gradient(150deg,rgba(7,140,135,.08) 12%,transparent 12.5%,transparent 87%,rgba(7,140,135,.08) 87.5%,rgba(7,140,135,.08)),linear-gradient(60deg,rgba(197,141,49,.055) 25%,transparent 25.5%,transparent 75%,rgba(197,141,49,.055) 75%);background-position:0 0,0 0,24px 42px,24px 42px,0 0;background-size:48px 84px,48px 84px,48px 84px,48px 84px,48px 84px;pointer-events:none}.hex-bg>*{position:relative;z-index:1}
+.announce{background:var(--ink);color:#fff;text-align:center;padding:11px 15px;font-size:12px;font-weight:900;letter-spacing:.08em}.announce b{color:var(--gold2)}
+.nav{position:absolute;top:42px;left:0;right:0;z-index:10}.nav-in{display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:950;letter-spacing:.06em}.brand img{width:30px;height:30px;object-fit:contain}.brand span{color:var(--gold2)}.nav-cta{border:1px solid rgba(255,255,255,.45);padding:9px 16px;border-radius:99px;color:#fff;font-size:12px;font-weight:900}
+.hero{color:#fff;background:radial-gradient(circle at 78% 25%,rgba(7,140,135,.25),transparent 28%),linear-gradient(120deg,#20252c,#30363d 65%,#eaf1ef);padding:125px 0 100px}.hero-grid{display:grid;grid-template-columns:1.08fr .72fr;gap:70px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold2);font-size:12px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:28px;height:2px;background:var(--gold2)}h1{font-size:clamp(43px,5.3vw,75px);line-height:.98;letter-spacing:-.05em;margin:18px 0 24px}h1 em{color:#63c8c2;font-style:normal}.hero p{font-size:19px;color:#d9dde0;max-width:700px}.hero strong{color:#fff}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;justify-content:center;align-items:center;background:linear-gradient(135deg,var(--teal),#0a9c96);color:#fff;font-weight:950;padding:17px 24px;border-radius:10px;box-shadow:0 15px 30px rgba(7,140,135,.3);transition:.2s}.btn:hover{transform:translateY(-2px)}.btn.gold{background:linear-gradient(135deg,var(--gold),#d5a251);box-shadow:0 15px 30px rgba(197,141,49,.22)}.cover{width:min(430px,100%);height:auto;display:block;filter:drop-shadow(0 30px 28px rgba(0,0,0,.32));transform:rotate(1.2deg)}.hero-cover{display:flex;justify-content:center;position:relative}
+.trust{border-bottom:1px solid var(--line);padding:18px 0;background:#fff}.trust-in{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;color:#73797e;font-size:11px;font-weight:900}.trust-in b{color:var(--teal)}
+.count-section{padding:52px 0;background:linear-gradient(135deg,#f4f8f7,#fff)}.count-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:45px;align-items:center}.count-grid h2{font-size:40px;line-height:1.08;margin:10px 0}.count-grid p{color:var(--muted)}.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.time{background:var(--ink);color:#fff;border-radius:15px;padding:20px 10px;text-align:center;box-shadow:var(--shadow)}.time strong{display:block;font-size:39px;line-height:1;color:var(--gold2)}.time span{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#d4d9dd}
+.section{padding:100px 0}.soft{background:var(--cream)}.center{text-align:center}.kicker{color:var(--teal);font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.15em}.section h2{font-size:clamp(34px,4.2vw,55px);line-height:1.07;letter-spacing:-.04em;max-width:900px;margin:10px auto 18px}.lead{max-width:800px;margin:auto;color:var(--muted);font-size:18px}.pain{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:45px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:38px;box-shadow:0 14px 45px rgba(30,35,40,.06)}.card.dark{background:var(--ink);color:#fff}.card.dark p{color:#d9dee2}.quote{font-size:31px;line-height:1.18;color:var(--gold);font-weight:950;margin:18px 0}.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}.number{background:#fff;border:1px solid var(--line);border-radius:17px;text-align:center;padding:26px}.number strong{display:block;color:var(--teal);font-size:43px;line-height:1}.number span{font-size:12px;font-weight:800;color:#676e74}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:45px}.pillar{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;position:relative;overflow:hidden}.pillar:before{content:"";position:absolute;width:100px;height:100px;border:1px solid rgba(7,140,135,.12);border-radius:50%;right:-35px;top:-35px}.pillar h3{font-size:24px;margin:12px 0 6px}.pillar p{color:var(--muted)}.num{color:var(--gold);font-size:11px;font-weight:950;letter-spacing:.14em}
+.author{display:grid;grid-template-columns:.65fr 1.35fr;gap:55px;align-items:center}.author-photo{min-height:430px;border-radius:24px;background:linear-gradient(135deg,#e9f4f2,#fff);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.author-photo img{width:100%;height:100%;min-height:430px;display:block;object-fit:cover;object-position:center 22%}.author h2{margin-left:0}.author p{color:var(--muted)}.signature{font-weight:900;color:var(--teal);font-size:17px}
+.showcase figure{margin:0}.showcase{display:grid;grid-template-columns:1fr;gap:24px;margin-top:55px}.showcase-main,.showcase-card{position:relative;overflow:hidden;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 22px 55px rgba(30,35,40,.12)}.showcase-main img{width:100%;height:auto;display:block;object-fit:contain}.showcase-side{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.showcase-card{display:flex;flex-direction:column}.showcase-card img{width:100%;height:390px;display:block;object-fit:contain;background:#f7f7f5}.showcase-label{position:static;background:var(--ink);color:#fff;padding:11px 16px;font-size:11px;font-weight:900;letter-spacing:.05em;text-align:center}.bonus-covers{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}.bonus-cover{display:grid;grid-template-columns:180px 1fr;align-items:center;gap:24px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 14px 40px rgba(30,35,40,.07)}.bonus-cover img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:12px}.bonus-cover h3{margin:0 0 7px;font-size:22px}.bonus-cover p{margin:0;color:var(--muted)}
+.chapters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:45px}.chapter{background:#fff;border:1px solid var(--line);border-radius:13px;padding:18px 20px;display:flex;gap:15px}.chapter b{display:block}.chapter small{color:var(--muted)}.chapter-no{color:var(--gold);font-weight:950;font-size:17px}
+.bonuses{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:35px}.bonus{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px}.ribbon{display:inline-block;background:var(--gold);color:#fff;border-radius:99px;padding:5px 10px;font-size:10px;font-weight:950}.bonus h3{font-size:23px;margin:13px 0 5px}.bonus p{color:var(--muted)}
+.offer{background:linear-gradient(120deg,#20252c,#30363d);color:#fff;padding:100px 0;position:relative;overflow:hidden}.offer-grid{display:grid;grid-template-columns:1fr .72fr;gap:60px;align-items:center}.offer h2{margin-left:0}.offer p{color:#dce1e5}.offer-card{background:#fff;color:var(--ink);border-radius:24px;padding:35px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.3)}.old{text-decoration:line-through;color:#92979e;font-weight:900}.price{font-size:78px;color:var(--teal);font-weight:950;line-height:.9;letter-spacing:-.06em}.price small{font-size:24px;vertical-align:top}.offer-card ul{text-align:left;list-style:none;padding:0;margin:25px 0}.offer-card li{padding:8px 0;border-bottom:1px solid #eee;font-size:13px}.deadline{font-size:11px;color:#777;margin-top:15px}
+.objection{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.tech{background:linear-gradient(135deg,#edf7f5,#fff);border:1px solid var(--line);border-radius:23px;padding:50px;text-align:center}.tech .icon{width:85px;height:85px;margin:auto}.objection h2{margin-left:0}.objection p{color:var(--muted)}
+.faq{max-width:850px;margin:40px auto}.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 21px;margin:10px 0}.faq summary{font-weight:900;cursor:pointer}.faq p{color:var(--muted)}
+.final{text-align:center;padding:100px 0;background:linear-gradient(135deg,#f0f8f6,#fff)}.fine{font-size:11px;color:#7b8186;max-width:760px;margin:22px auto}
+footer{background:#24282e;color:#bcc2c7;text-align:center;padding:30px;font-size:11px}.sticky{position:fixed;bottom:15px;left:50%;transform:translateX(-50%);z-index:20;background:rgba(41,45,53,.96);padding:8px;border-radius:999px;display:flex;align-items:center;gap:10px;box-shadow:0 15px 45px rgba(0,0,0,.25)}.sticky span{color:#fff;font-size:12px;font-weight:900;padding:0 8px}.sticky .btn{padding:10px 17px;border-radius:999px;font-size:11px}
+@media(max-width:850px){.nav-cta{display:none}.hero-grid,.count-grid,.pain,.author,.offer-grid,.objection{grid-template-columns:1fr}.hero{padding-top:115px}.hero-cover{margin-top:35px}.numbers,.pillars{grid-template-columns:1fr}.chapters,.bonuses{grid-template-columns:1fr}.showcase-side{grid-template-columns:1fr 1fr}.bonus-covers{grid-template-columns:1fr}.section{padding:75px 0}.count-grid h2{font-size:34px}}
+@media(max-width:500px){.timer{gap:6px}.time{padding:15px 5px}.time strong{font-size:29px}.showcase-side{grid-template-columns:1fr}.showcase-card img{height:auto;max-height:none}.bonus-cover{grid-template-columns:110px 1fr;gap:15px}.bonus-cover h3{font-size:18px}.sticky span{display:none}.sticky{width:auto}.sticky .btn{white-space:nowrap}}
+.offer-timer{border:1px solid var(--gold2);border-radius:18px;padding:14px;margin-top:18px}.offer-timer .time{box-shadow:none;border:1px solid rgba(240,201,110,.3)}
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:45px}.fit-card{border-radius:22px;padding:34px;border:1px solid var(--line);background:#fff}.fit-card.yes{border-color:rgba(7,140,135,.3);background:linear-gradient(135deg,#edf8f7,#fff)}.fit-card.no{background:#f1f3f5}.fit-card h3{font-size:22px;margin:0 0 18px}.fit-card ul{list-style:none;padding:0;margin:0}.fit-card li{position:relative;padding:10px 0 10px 30px;border-bottom:1px solid rgba(41,45,53,.08)}.fit-card li:last-child{border-bottom:0}.fit-card.yes li:before,.fit-card.no li:before{position:absolute;left:0;top:10px;font-weight:950}.fit-card.yes li:before{content:"✓";color:var(--teal)}.fit-card.no li:before{content:"×";color:#7f8992}
+@media(max-width:850px){.fit-grid{grid-template-columns:minmax(0,1fr);gap:18px}}
+
+.research{background:#292d35;color:#fff}.research .kicker,.research a{color:var(--gold2)}.research .lead,.research p{color:#dce1e5}.research-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:36px}.research-grid article{padding:26px;border:1px solid #ffffff26;border-radius:18px;background:#ffffff06}.research h3{font-size:18px;line-height:1.3;color:#63c8c2}.research a{font-size:14px;text-decoration:underline;text-underline-offset:4px}.research-note{font-size:14px;max-width:900px;margin:28px auto 0}.research-grid article{overflow-wrap:anywhere}
+@media(max-width:850px){.nav{position:relative;top:auto;background:#292d35;padding:16px 0}.brand{font-size:14px;letter-spacing:.02em;gap:8px}.brand img{flex-shrink:0}.hero{padding-top:56px}.author{gap:24px}.author-photo{width:min(240px,100%);height:290px;min-height:0;margin-inline:auto}.author-photo img{height:100%;min-height:0;object-fit:cover;object-position:center 22%}.research-grid{grid-template-columns:1fr}.author h2{font-size:34px}.research{padding-block:64px}}
+
+/* Fases temporais: preserva os estilos e as regras responsivas originais. */
+[hidden]{display:none!important}
+a[aria-disabled="true"]{cursor:default}
+
+/* Versão compacta: sete blocos, mesmas imagens e identidade do original. */
+.nav{position:relative;top:auto;background:#242a31;padding:18px 0}.announce{font-size:12px}.hero{padding:65px 0 60px}.hero-grid{gap:48px;grid-template-columns:1.12fr .78fr}h1{font-size:clamp(40px,4.8vw,65px);line-height:1.05}.hero p{font-size:18px}.hero-facts{font-size:14px;color:#dce1e5;margin-top:22px}.hero-count{margin-top:22px;max-width:360px}.count-label{font-size:14px;color:#dce1e5;margin-bottom:10px}.hero-count .time{padding:12px 8px;border:1px solid #ffffff25;box-shadow:none}.hero-count .time strong{font-size:27px}.time span{font-size:12px}.section{padding:68px 0}.section h2,.offer h2{font-size:clamp(32px,3.5vw,46px);line-height:1.12;letter-spacing:-.035em}.compact-pain{margin-top:0;gap:64px;align-items:center}.compact-pain h2{margin-left:0}.compact-pain p{margin:0 0 14px;color:var(--muted)}.pillars,.fit-grid{margin-top:28px}.pillar{padding:26px}.pillar p{margin-bottom:0}.pillar h3{font-size:23px}.num,.kicker,.eyebrow{font-size:12px}.fit-card{padding:28px}.fit-card h3{font-size:21px}.fit-card li{padding-top:9px;padding-bottom:9px}.chapter-disclosure{margin:28px 0 0;border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px 22px}.chapter-disclosure summary{cursor:pointer;font-weight:700;color:var(--teal2);list-style:none;display:flex;justify-content:space-between;gap:16px}.chapter-disclosure summary span{font-size:22px;line-height:1}.chapter-disclosure[open] summary span{transform:rotate(45deg)}.chapters{margin-top:18px}.chapter small{font-size:14px}.showcase{margin-top:26px;grid-template-columns:1.3fr 1fr;gap:20px;align-items:stretch}.showcase-main img{height:100%;max-height:500px;object-fit:contain;background:#f7f7f5}.showcase-main{display:flex;flex-direction:column}.showcase-main img{flex:1;min-height:0}.showcase-side{grid-template-columns:1fr;gap:16px}.showcase-card img{height:205px}.showcase-label{font-size:12px;padding:9px}.bonus-cover{grid-template-columns:90px 1fr;gap:18px;padding:18px}.bonus-cover h3{font-size:20px}.bonus-cover p{font-size:16px}.ribbon{font-size:12px;margin-bottom:8px}.author{grid-template-columns:.6fr 1.2fr;gap:48px}.author-photo{height:365px;min-height:0}.author-photo img{height:100%;min-height:0}.ethics{border-left:3px solid var(--teal);padding:4px 0 4px 20px;margin-top:20px}.ethics p{margin:8px 0 0;font-size:16px}.offer{padding:68px 0}.offer-grid{gap:48px;align-items:start}.offer h2{margin-top:16px}.offer-card{padding:30px}.offer-card li{font-size:16px;padding:5px 0}.offer-card ul{margin:22px 0}.offer-card .price{margin:18px 0}.offer-card .btn{font-size:14px;padding:16px 18px}.deadline{font-size:14px}.guarantee{margin-top:22px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:14px}.guarantee strong{color:var(--teal2)}.offer-faq{margin-top:38px;border-top:1px solid #ffffff25;padding-top:24px}.offer-faq h3{font-size:23px;margin:0}.offer-faq .faq{max-width:none;margin:16px 0 24px}.offer-faq details{background:#ffffff06;border-color:#ffffff25;color:white;padding:16px 20px}.offer-faq p{color:#dce1e5;margin-bottom:0}.offer-faq>.btn{display:flex;max-width:420px;margin:auto}.sticky{max-width:calc(100% - 24px)}.sticky .btn{font-size:12px}.sticky>span{white-space:nowrap}footer{font-size:12px;padding-bottom:95px}a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--gold2);outline-offset:5px}.btn{text-align:center}body[data-phase=normal] .hero-count{display:none}section[id]{scroll-margin-top:24px}
+@media(max-width:850px){.hero{padding:42px 0}.hero-grid{grid-template-columns:1fr;gap:20px}.hero-cover{margin:12px 0 0}.cover{width:min(320px,85%)}h1{font-size:clamp(39px,7vw,56px);max-width:650px}.hero-count{max-width:400px}.section{padding:52px 0}.compact-pain{grid-template-columns:1fr;gap:10px}.pillars{gap:14px}.pillar{padding:22px}.pillar h3{margin:6px 0}.pillar p{margin-top:6px}.fit-grid{gap:16px}.showcase-card img{height:160px}.author{grid-template-columns:1fr;gap:24px}.author-photo{width:230px;height:285px}.offer{padding:52px 0}.offer-grid{grid-template-columns:1fr;gap:28px}.offer-timer{max-width:450px}.offer-card{max-width:560px;width:100%;margin:auto}.offer h2{font-size:36px}}
+@media(max-width:500px){.wrap{width:90%}.brand{font-size:13px}.announce{font-size:12px;letter-spacing:.02em}.hero p{font-size:17px}.hero .btn{font-size:14px;width:100%;padding-inline:14px}.hero-grid{gap:18px}.hero-cover{margin-top:0}.cover{width:260px}.section h2{font-size:33px}.fit-card{padding:22px}.fit-card h3{font-size:20px}.showcase{grid-template-columns:1fr;gap:14px}.showcase-main img{max-height:320px}.showcase-side{grid-template-columns:1fr 1fr;gap:10px}.showcase-card img{height:155px}.showcase-label{font-size:12px;padding:8px}.bonus-covers{gap:14px}.bonus-cover{grid-template-columns:75px 1fr;padding:15px;gap:15px}.bonus-cover h3{font-size:18px}.bonus-cover p{font-size:16px}.offer-card{padding:24px}.sticky{width:calc(100% - 24px);justify-content:center}.sticky .btn{white-space:normal;line-height:1.3;width:100%;padding:12px;font-size:12px}.time strong{font-size:27px}.chapters{grid-template-columns:1fr}.chapter{padding:14px;gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+
+.section{padding-block:86px}.evidence-note{font-size:14px!important;margin-top:18px}.showcase-card img{height:235px}
+@media(max-width:850px){.section{padding-block:66px}}
+@media(max-width:500px){.showcase-side{grid-template-columns:1fr}.showcase-card img{height:350px}.showcase-main img{max-height:380px}}
+.fit-card.no li:before{color:#b46666}
+/* Revisão de fluxo: conteúdo antes dos detalhes e oferta após a autora. */
+.hero p.hero-investment{font-size:16px;margin:22px 0 0;color:#dce1e5}.hero-investment strong{font-size:23px}.hero .actions{margin-top:15px}.outcomes{list-style:none;padding:0;margin:24px 0 0}.outcomes li{padding:6px 0 6px 25px;position:relative}.outcomes li:before{content:'✓';color:var(--teal2);position:absolute;left:0;font-weight:bold}.showcase.product-main{display:block;max-width:820px;margin:30px auto 0}.product-main .showcase-main img{height:auto;max-height:480px;flex:none}.digital-note{text-align:center;font-size:14px;color:var(--muted);margin:14px auto 24px;max-width:650px}.extra-views .showcase-side{margin-top:20px;grid-template-columns:1fr 1fr}.content-ethics{margin-top:28px;border-left:3px solid var(--teal);padding:5px 0 5px 22px}.content-ethics h3{font-size:19px;margin:0 0 8px}.content-ethics p{margin:0;color:var(--muted)}.product-action{text-align:center;margin-top:28px}.payment-note{color:var(--muted)!important;font-size:14px;margin-top:20px}.evidence-end{background:var(--cream);padding:32px 0}.evidence-disclosure>summary{display:flex;justify-content:space-between;gap:15px;cursor:pointer;font-weight:700;font-size:18px;padding:20px;border:1px solid var(--line);border-radius:12px;background:white}.evidence-disclosure>summary span{font-size:14px;font-weight:400;color:var(--teal2)}.evidence-disclosure .research{margin-top:20px;border-radius:18px;padding-block:50px}.evidence-disclosure .research h2{font-size:36px}.evidence-disclosure .research-grid{gap:16px}.evidence-disclosure .research-grid article{padding:22px}
+@media(max-width:600px){.evidence-disclosure>summary{flex-direction:column}.extra-views .showcase-side{grid-template-columns:1fr}.product-main .showcase-main img{max-height:360px}.evidence-disclosure .research h2{font-size:30px}.product-action .btn{width:100%;font-size:14px}}
+</style>
+</head>
+<body data-phase="pre">
+<noscript><p style="padding:16px;text-align:center">Ative o JavaScript para ver o preço e a disponibilidade atualizados. Lançamento: 13/10/2026 às 10h; oferta de R$ 67 até 20/10/2026 às 10h; depois, R$ 97. Horário de Brasília.</p></noscript>
+
+<div class="announce"><span data-phase-text="announce">PRÉ-LANÇAMENTO • 13/10 ÀS 10H (BRASÍLIA) • R$ 67,00 NA ABERTURA</span></div>
+
+<header class="nav"><div class="wrap nav-in">
+  <div class="brand"><img alt="" src="assets/imagem-1.webp"> IA <span>PARA PSICÓLOGOS</span></div>
+  <a class="nav-cta" href="#oferta"><span data-phase-text="nav">VER LANÇAMENTO ↓</span></a>
+</div></header>
+
+<main><section class="hero hex-bg">
+<div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow">O guia prático do psicólogo moderno</div>
+    <h1>Aprenda a usar a IA <em>com segurança</em> e recupere tempo na sua rotina.</h1>
+    <p>Simplifique tarefas do consultório com um e-book digital de IA. <strong>Preserve o sigilo e mantenha seu julgamento profissional no comando.</strong></p>
+    <p class="hero-investment"><span data-phase-text="card-label">Preço no lançamento</span> · <strong>R$ <span data-phase-text="price">67</span>,00</strong></p><div class="actions"><a class="btn" data-purchase href="https://docs.google.com/forms/d/e/1FAIpQLScz9sHo5EojSLNho-xaUUyGHngfvV_8iD9qCF4BfXnpXn1-YA/viewform?usp=header">QUERO SER AVISADO NO LANÇAMENTO</a></div>
+  <div class="hero-facts">10 capítulos · 11 prompts · 2 bônus</div><div class="hero-count"><div class="count-label" data-phase-text="top-label">Lançamento em 13/10/2026 às 10h (Brasília)</div><div class="timer" id="timer"><div class="time"><strong id="days">00</strong><span>Dias</span></div><div class="time"><strong id="hours">00</strong><span>Horas</span></div><div class="time"><strong id="mins">00</strong><span>Minutos</span></div><div class="time"><strong id="secs">00</strong><span>Segundos</span></div></div></div></div>
+  <div class="hero-cover"><img class="cover" src="assets/imagem-2.webp" alt="Livro IA para Psicólogos em perspectiva 3D"></div>
+</div>
+</section>
+<section class="section" id="rotina"><div class="wrap pain compact-pain"><div><div class="kicker">A carga oculta do consultório</div><h2>A sessão termina.<br>O trabalho continua.</h2></div><div><p>Prontuários, relatórios e tarefas administrativas se acumulam depois do último atendimento. E o que sobra para você é menos descanso e mais pendências.</p><p><strong>Aprenda a organizar essa rotina com apoio da IA</strong>, entendendo quais tarefas podem ser simplificadas e quais exigem sua atuação direta.</p><ul class="outcomes"><li>Organize documentação e tarefas administrativas.</li><li>Aprenda a criar instruções úteis para a IA.</li><li>Abra espaço na rotina para descanso e estudo.</li></ul></div></div></section>
+<section class="section" id="para-quem">
+<div class="wrap">
+  <div class="center"><div class="kicker">Identificação</div><h2>Este e-book é para você?</h2><p class="lead">Veja se o guia combina com o momento que você vive na sua prática profissional.</p></div>
+  <div class="fit-grid">
+    <article class="fit-card yes"><h3>Este guia é para você que:</h3><ul>
+      <li>É psicólogo clínico e sente que a burocracia invade seu tempo.</li>
+      <li>Deseja usar IA, mas tem receio de comprometer a ética ou o sigilo.</li>
+      
+      <li>Passa horas elaborando prontuários, relatórios e documentos.</li>
+<li>Quer organizar melhor o consultório e os processos administrativos.</li>
+      <li>Busca aplicar tecnologia de maneira prática, responsável e sem programação.</li>
+    </ul></article>
+    <article class="fit-card no"><h3>Este guia não é para quem:</h3><ul>
+      <li>Procura substituir o julgamento clínico pela Inteligência Artificial.</li>
+      <li>Pretende inserir dados identificáveis de pacientes em qualquer ferramenta.</li>
+      <li>Busca resultados automáticos sem estudar e implementar os processos.</li>
+      
+    </ul></article>
+  </div>
+</div>
+</section>
+<section class="section soft hex-bg">
+<div class="wrap">
+<div class="center"><div class="kicker">Veja o que você recebe</div><h2>Do primeiro prompt à sua rotina organizada.</h2><p class="lead">10 capítulos, 11 prompts no guia e um plano de implementação de 30 dias.</p></div>
+<div class="showcase product-main"><figure class="showcase-main"><img src="assets/imagem-3.webp" alt="Livro IA para Psicólogos aberto ao lado do Kit de Prompts Essenciais em um tablet"><figcaption class="showcase-label">E-book + Kit de Prompts Essenciais</figcaption></figure></div><p class="digital-note">Material digital. Livros e dispositivos nas imagens são ilustrativos e não acompanham a compra.</p><details class="chapter-disclosure"><summary>Ver os 10 capítulos do guia <span>+</span></summary><div class="chapters">
+<div class="chapter"><div class="chapter-no">01</div><div><b>IA e Psicologia</b><small>Uso estratégico e ético.</small></div></div>
+<div class="chapter"><div class="chapter-no">02</div><div><b>Limites da IA</b><small>O que pode e o que continua sendo responsabilidade do psicólogo.</small></div></div>
+<div class="chapter"><div class="chapter-no">03</div><div><b>Prompts eficientes</b><small>Instruções melhores para tarefas profissionais.</small></div></div>
+<div class="chapter"><div class="chapter-no">04</div><div><b>Documentação</b><small>Otimização de registro e organização.</small></div></div>
+<div class="chapter"><div class="chapter-no">05</div><div><b>Textos profissionais</b><small>IA como apoio na produção e revisão.</small></div></div>
+<div class="chapter"><div class="chapter-no">06</div><div><b>Processos</b><small>Rotinas mais eficientes.</small></div></div>
+<div class="chapter"><div class="chapter-no">07</div><div><b>Privacidade</b><small>Cuidados com proteção de dados.</small></div></div>
+<div class="chapter"><div class="chapter-no">08</div><div><b>CFP + LGPD</b><small>Resoluções CFP nº 06/2019 e nº 09/2024 e LGPD.</small></div></div>
+<div class="chapter"><div class="chapter-no">09</div><div><b>Sem programação</b><small>Aplicação sem precisar entender código.</small></div></div>
+<div class="chapter"><div class="chapter-no">10</div><div><b>Plano de 30 dias</b><small>Implementação passo a passo.</small></div></div>
+</div>
+</details><details class="chapter-disclosure extra-views"><summary>Ver outras imagens do material <span>+</span></summary><div class="showcase-side"><figure class="showcase-card"><img src="assets/imagem-4.webp" alt="Exemplares do livro IA para Psicólogos"><figcaption class="showcase-label">Guia completo</figcaption></figure><figure class="showcase-card"><img src="assets/imagem-5.webp" alt="Profissional utilizando o Checklist de Conformidade em um tablet"><figcaption class="showcase-label">Aplicação prática</figcaption></figure></div></details><div class="bonus-covers"><article class="bonus-cover"><img src="assets/imagem-6.webp" alt="Capa do Kit de Prompts Essenciais"><div><span class="ribbon">BÔNUS 01</span><h3>Kit de Prompts Essenciais</h3><p>20 prompts no kit bônus, além dos 11 apresentados no e-book.</p></div></article><article class="bonus-cover"><img src="assets/imagem-7.webp" alt="Capa do Checklist Rápido de Conformidade"><div><span class="ribbon">BÔNUS 02</span><h3>Checklist Rápido de Conformidade</h3><p>Uma revisão prática para o uso ético e seguro da IA.</p></div></article></div><aside class="content-ethics"><h3>Ética, sigilo e proteção de dados</h3><p >O guia aborda CFP e LGPD, limites da IA e revisão profissional. A tecnologia apoia tarefas; decisões clínicas e responsabilidade permanecem com o psicólogo.</p></aside><div class="product-action"><a class="btn" href="#oferta">VER O PACOTE E A OFERTA →</a></div></div></section>
+<section class="section">
+<div class="wrap author">
+  <div class="author-photo"><img src="assets/imagem-8.webp" alt="Tereza Raquel Soares do Prado, autora do guia IA para Psicólogos"></div><div><div class="kicker">Quem criou este guia</div><h2>Tereza Raquel Soares do Prado - CRP 06/113977</h2><p>Tem uma trajetória que conecta o cuidado clínico à precisão corporativa. Unindo a prática da psicologia à sua experiência em multinacionais nas áreas de recrutamento, seleção e treinamento, ela desenvolveu um olhar único para organização e eficiência. Neste guia prático, ela ensina como aplicar essa bagagem estratégica diretamente na estruturação e gestão do seu consultório de psicologia.</p></div>
+</div>
+</section>
+<section class="offer" id="oferta">
+<div class="wrap offer-grid">
+<div><div class="eyebrow"><span data-phase-text="offer-label">Pré-lançamento</span></div><h2>IA PARA PSICÓLOGOS<br>+ dois bônus</h2><p>Leve o aprendizado para o consultório com orientações práticas, prompts e um plano para começar.</p><p><strong><span data-phase-text="offer-timer-label">⏳ Lançamento em 13/10/2026 às 10h (Brasília). Contagem para a abertura:</span></strong></p><div class="timer offer-timer" id="timer-oferta" aria-label="Contagem regressiva para o lançamento"><div class="time"><strong id="days-oferta">00</strong><span>Dias</span></div><div class="time"><strong id="hours-oferta">00</strong><span>Horas</span></div><div class="time"><strong id="mins-oferta">00</strong><span>Minutos</span></div><div class="time"><strong id="secs-oferta">00</strong><span>Segundos</span></div></div></div>
+<div class="offer-card"><div style="color:var(--gold);font-weight:950;text-transform:uppercase;font-size:11px"><span data-phase-text="card-label">Preço no lançamento</span></div><div class="old" hidden>R$ 97,00</div><div class="price"><small>R$</small><span data-phase-text="price">67</span><small>,00</small></div><div><strong><span data-phase-text="duration">a partir de 13/10 às 10h</span></strong></div><ul><li>✓ E-book completo</li><li>✓ 11 prompts no e-book</li><li>✓ Plano de 30 dias</li><li data-launch-bonus>✓ Kit com 20 prompts + checklist</li><li>✓ Acesso aos materiais pela Hotmart</li></ul><a class="btn" style="width:100%" href="https://docs.google.com/forms/d/e/1FAIpQLScz9sHo5EojSLNho-xaUUyGHngfvV_8iD9qCF4BfXnpXn1-YA/viewform?usp=header" data-purchase>QUERO SER AVISADO NO LANÇAMENTO</a><p class="payment-note">Pagamento único · E-book digital e dois bônus incluídos.</p><div class="guarantee"><strong>Garantia e reembolso</strong><br>Consulte o prazo e as condições do produto no checkout da Hotmart.</div><div class="deadline"><span data-phase-text="deadline">R$ 67 de 13/10/2026 às 10h até 20/10/2026 às 10h (Brasília). Depois, R$ 97. Os dois bônus permanecem incluídos.</span></div></div>
+</div>
+<div class="wrap offer-faq"><h3>Antes de começar</h3><div class="faq"><details><summary>Preciso saber programar?</summary><p>Não. O guia usa uma abordagem prática, com instruções e exemplos voltados à rotina do psicólogo.</p></details><details><summary>Como recebo o e-book e os bônus?</summary><p>Após a abertura das vendas e a confirmação da compra, o acesso é feito pela Hotmart. O pacote inclui o e-book, o Kit de Prompts Essenciais com 20 prompts e o Checklist Rápido de Conformidade.</p></details><details><summary>Como o guia trata ética, CFP e LGPD?</summary><p>O material aborda sigilo, proteção de dados e limites de uso. A proposta exige revisão profissional e não substitui seu julgamento clínico nem representa certificação de conformidade pelo CFP.</p></details></div><a class="btn" data-purchase href="https://docs.google.com/forms/d/e/1FAIpQLScz9sHo5EojSLNho-xaUUyGHngfvV_8iD9qCF4BfXnpXn1-YA/viewform?usp=header">QUERO SER AVISADO NO LANÇAMENTO</a></div></section>
+<section class="evidence-end"><div class="wrap"><details class="evidence-disclosure"><summary>Evidências e uso responsável <span>Ver as três referências ↗</span></summary><section class="section research hex-bg" id="pesquisas"><div class="wrap"><div class="center"><div class="kicker">Evidências e uso responsável</div><h2>Menos burocracia, com responsabilidade profissional</h2><p class="lead">Três referências internacionais dialogam com a proposta do guia: ganhar tempo, organizar a documentação e usar a IA com critério.</p></div><div class="research-grid">
+<article><h3>Universidade de Toronto</h3><p><strong>Mais tempo para o cuidado.</strong> Uma pesquisa com nove médicos em consultas simuladas encontrou 69,1% menos tempo de documentação com assistentes de IA. Esse potencial de aliviar tarefas administrativas converge com o objetivo do guia: ajudar você a organizar a rotina e recuperar tempo.</p><a href="https://news.engineering.utoronto.ca/u-of-t-research-finds-ai-scribes-save-doctors-time-and-may-ease-administrative-burden/" target="_blank" rel="noopener noreferrer">Ler a divulgação da pesquisa ↗</a></article>
+<article><h3>Associação Americana de Psicologia</h3><p><strong>Tecnologia com critério profissional.</strong> A APA orienta psicólogos a avaliar ferramentas de documentação com IA considerando benefícios, ética e privacidade. O guia compartilha essa preocupação ao abordar limites da IA, proteção de dados e responsabilidade profissional.</p><a href="https://www.apa.org/topics/artificial-intelligence-machine-learning/evaluating-ai-scribes.html" target="_blank" rel="noopener noreferrer">Consultar a orientação da APA ↗</a></article>
+<article><h3>Eleos Health</h3><p><strong>Organização que faz diferença na rotina.</strong> Em um estudo de caso divulgado pela Eleos, a Coleman Health Services reduziu o tempo de documentação em 70% com a plataforma. O caso ilustra o potencial da IA em processos bem definidos — uma direção alinhada ao foco prático do guia.</p><a href="https://eleos.health/case-studies/how-coleman-reduced-documentation-time-70-percent-with-eleos/" target="_blank" rel="noopener noreferrer">Ler o estudo de caso ↗</a></article>
+</div><p class="research-note">Uso responsável: os resultados citados pertencem às ferramentas e aos contextos estudados; as referências não avaliaram nem endossam este e-book. A economia de 5 horas é ilustrativa. Os ganhos variam conforme a rotina e a implementação, com revisão profissional e respeito ao sigilo e à proteção de dados.</p></div></section></details></div></section></main>
+<footer>IA PARA PSICÓLOGOS — O Guia Prático do Psicólogo Moderno • Tereza Raquel Soares do Prado</footer>
+
+<div class="sticky"><span><span data-phase-text="sticky">LANÇAMENTO • 13/10 ÀS 10H</span></span><a class="btn gold" href="https://docs.google.com/forms/d/e/1FAIpQLScz9sHo5EojSLNho-xaUUyGHngfvV_8iD9qCF4BfXnpXn1-YA/viewform?usp=header" data-purchase>QUERO SER AVISADO NO LANÇAMENTO</a></div>
+
+<section class="count-section" id="aviso-lancamento" hidden><div class="wrap"><h2>Lembrete do lançamento</h2><p id="aviso-texto">Adicione o lançamento ao seu calendário.</p><button type="button" class="btn" id="salvar-lembrete" style="border:0;cursor:pointer;font:inherit">ADICIONAR AO CALENDÁRIO</button><noscript><p>O lançamento será em 13/10/2026 às 10h, horário de Brasília. Ative o JavaScript para usar o lembrete e consultar a disponibilidade.</p></noscript></div></section>
+<script>
+// CONFIGURAÇÃO CENTRAL — America/Sao_Paulo (UTC−03:00 nestas datas).
+// As datas são absolutas: publicar antes não reinicia a contagem.
+// Este HTML não muda o preço nem a disponibilidade do checkout Hotmart.
+const CONFIG_OFERTA = Object.freeze({
+  fuso: 'America/Sao_Paulo',
+  lancamento: '2026-10-13T10:00:00-03:00',
+  fimPromocao: '2026-10-20T10:00:00-03:00',
+  precos: { promo: 67, normal: 97 },
+  urls: {
+    espera: 'https://docs.google.com/forms/d/e/1FAIpQLScz9sHo5EojSLNho-xaUUyGHngfvV_8iD9qCF4BfXnpXn1-YA/viewform?usp=header', // Cole aqui o WhatsApp ou formulário. Vazio: lembrete de calendário.
+    promo: 'https://pay.hotmart.com/L107498826I?off=bm0uzarj',
+    normal: 'https://pay.hotmart.com/L107498826I?off=j0nxmu53'
+  },
+  ctas: {
+    espera: 'QUERO SER AVISADO NO LANÇAMENTO',
+    calendario: 'LEMBRAR DO LANÇAMENTO',
+    promo: 'QUERO COMPRAR COM DESCONTO →',
+    normal: 'QUERO COMPRAR AGORA →',
+    indisponivel: 'COMPRA EM BREVE'
+  },
+  lembrete: {
+    titulo: 'Lançamento — IA PARA PSICÓLOGOS',
+    descricao: 'O e-book IA PARA PSICÓLOGOS está disponível. Acesse a página do produto.',
+    aviso: 'Adicione o lançamento ao seu calendário. O lembrete será configurado no aplicativo de calendário; não há cadastro em lista de espera.'
+  }
+});
+const TEXTOS_OFERTA = {
+  "announce": {
+    "pre": "PRÉ-LANÇAMENTO • 13/10 ÀS 10H (BRASÍLIA) • R$ 67,00 NA ABERTURA",
+    "promo": "JÁ DISPONÍVEL • E-BOOK + 11 PROMPTS + 2 BÔNUS • R$ 67,00 ATÉ 20/10 ÀS 10H",
+    "normal": "IA PARA PSICÓLOGOS • E-BOOK + 11 PROMPTS + 2 BÔNUS • R$ 97,00"
+  },
+  "top-label": {
+    "pre": "Lançamento em 13/10/2026 às 10h (Brasília)",
+    "promo": "Oferta de lançamento termina em:",
+    "normal": "IA PARA PSICÓLOGOS já disponível"
+  },
+  "top-title": {
+    "pre": "Seu próximo passo começa aqui.",
+    "promo": "R$ 67 por apenas 7 dias.",
+    "normal": "Seu próximo passo começa agora."
+  },
+  "top-copy": {
+    "pre": "Prepare-se: vendas a partir de 13/10 às 10h, por R$ 67 durante 7 dias. Horário de Brasília.",
+    "promo": "Garanta o guia por R$ 67 até 20/10/2026 às 10h (Brasília). Depois, R$ 97, com os mesmos bônus incluídos.",
+    "normal": "Adquira o guia por R$ 97 e aprenda a aplicar a IA à sua rotina com clareza, organização e responsabilidade."
+  },
+  "offer-label": {
+    "pre": "Pré-lançamento",
+    "promo": "Oferta de lançamento",
+    "normal": "Adquira seu guia"
+  },
+  "included": {
+    "pre": "No lançamento, você poderá adquirir o e-book completo, 11 prompts, plano de 30 dias, 2 bônus e acesso ao portal de membros.",
+    "promo": "Você recebe o e-book completo, 11 prompts, plano de 30 dias, 2 bônus e acesso ao portal de membros.",
+    "normal": "Você recebe o e-book completo, 11 prompts, plano de 30 dias, 2 bônus e acesso ao portal de membros."
+  },
+  "offer-timer-label": {
+    "pre": "⏳ Lançamento em 13/10/2026 às 10h (Brasília). Contagem para a abertura:",
+    "promo": "⏳ De R$ 97,00 por R$ 67,00 até 20/10 às 10h (Brasília). A oferta termina em:",
+    "normal": "Preço normal: R$ 97,00."
+  },
+  "card-label": {
+    "pre": "Preço no lançamento",
+    "promo": "Condição de lançamento",
+    "normal": "Preço normal"
+  },
+  "price": {
+    "pre": "67",
+    "promo": "67",
+    "normal": "97"
+  },
+  "duration": {
+    "pre": "a partir de 13/10 às 10h",
+    "promo": "somente até 20/10 às 10h",
+    "normal": "pagamento único"
+  },
+  "deadline": {
+    "pre": "R$ 67 de 13/10/2026 às 10h até 20/10/2026 às 10h (Brasília). Depois, R$ 97. Os dois bônus permanecem incluídos.",
+    "promo": "Economize R$ 30 até 20/10/2026 às 10h (Brasília). Após esse horário: R$ 97, com os dois bônus incluídos.",
+    "normal": "E-book e dois bônus incluídos. Compra pela Hotmart. Confira as condições no checkout."
+  },
+  "sticky": {
+    "pre": "LANÇAMENTO • 13/10 ÀS 10H",
+    "promo": "IA PARA PSICÓLOGOS • R$ 67,00",
+    "normal": "IA PARA PSICÓLOGOS • R$ 97,00"
+  },
+  "faq": {
+    "pre": "Sim. O guia traz 11 prompts prontos e testados. O Kit de Prompts Essenciais é um bônus separado com 20 prompts.",
+    "promo": "Sim. O guia traz 11 prompts prontos e testados. O Kit de Prompts Essenciais é um bônus separado com 20 prompts.",
+    "normal": "Sim. O guia traz 11 prompts prontos e testados. O Kit de Prompts Essenciais é um bônus separado com 20 prompts."
+  },
+  "showcase-copy": {
+    "pre": "Conheça o guia e os materiais complementares que acompanham sua jornada de implementação.",
+    "promo": "Conheça o guia e os materiais complementares que acompanham sua jornada de implementação.",
+    "normal": "Conheça o guia e os materiais complementares que acompanham sua jornada de implementação."
+  },
+  "nav": {
+    "pre": "VER LANÇAMENTO ↓",
+    "promo": "VER OFERTA ↓",
+    "normal": "VER O GUIA ↓"
+  }
+};
+function estadoOferta(agora) {
+  const inicio = Date.parse(CONFIG_OFERTA.lancamento);
+  const fim = Date.parse(CONFIG_OFERTA.fimPromocao);
+  const fase = agora < inicio ? 'pre' : agora < fim ? 'promo' : 'normal';
+  const restante = Math.max(0, Math.ceil(((fase === 'pre' ? inicio : fim) - agora) / 1000));
+  return { fase, partes: [Math.floor(restante/86400), Math.floor(restante%86400/3600), Math.floor(restante%3600/60), restante%60] };
+}
+function moeda(valor) { return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(valor); }
+// Os textos acima ficam centralizados; preços são preenchidos pela configuração.
+for (const fases of Object.values(TEXTOS_OFERTA)) {
+  for (const fase of Object.keys(fases)) fases[fase] = fases[fase].replace(/R\$ 67/g, moeda(CONFIG_OFERTA.precos.promo)).replace(/R\$ 97/g, moeda(CONFIG_OFERTA.precos.normal));
+}
+TEXTOS_OFERTA.price = { pre: String(CONFIG_OFERTA.precos.promo), promo: String(CONFIG_OFERTA.precos.promo), normal: String(CONFIG_OFERTA.precos.normal) };
+let faseAnterior;
+function atualizarOferta() {
+  const estado = estadoOferta(Date.now());
+  if (estado.fase !== faseAnterior) {
+    document.body.dataset.phase = estado.fase;
+    document.getElementById('aviso-lancamento').hidden = estado.fase !== 'pre' || Boolean(CONFIG_OFERTA.urls.espera);
+    document.querySelector('.old').textContent = moeda(CONFIG_OFERTA.precos.normal);
+    document.querySelectorAll('[data-phase-text]').forEach(el => {
+      el.textContent = TEXTOS_OFERTA[el.dataset.phaseText][estado.fase];
+    });
+    document.querySelector('.old').hidden = estado.fase !== 'promo';
+    document.querySelectorAll('[data-purchase]').forEach(el => {
+      const pre = estado.fase === 'pre';
+      const url = pre ? (CONFIG_OFERTA.urls.espera || '#aviso-lancamento') : CONFIG_OFERTA.urls[estado.fase];
+      if (url) el.setAttribute('href', url);
+      else el.removeAttribute('href');
+      el.textContent = pre
+        ? (CONFIG_OFERTA.urls.espera ? CONFIG_OFERTA.ctas.espera : CONFIG_OFERTA.ctas.calendario)
+        : url ? CONFIG_OFERTA.ctas[estado.fase] : CONFIG_OFERTA.ctas.indisponivel;
+      if (url) el.removeAttribute('aria-disabled');
+      else el.setAttribute('aria-disabled', 'true');
+    });
+    ['timer','timer-oferta'].forEach(id => {
+      const timer = document.getElementById(id);
+      timer.hidden = estado.fase === 'normal';
+      timer.setAttribute('role','timer');
+      timer.setAttribute('aria-label', estado.fase === 'pre' ? 'Contagem regressiva para o lançamento' : 'Contagem regressiva para o fim da promoção');
+    });
+    faseAnterior = estado.fase;
+  }
+  ['days','hours','mins','secs'].forEach((id,i) => {
+    const valor = String(estado.partes[i]).padStart(2,'0');
+    document.getElementById(id).textContent = valor;
+    document.getElementById(id+'-oferta').textContent = valor;
+  });
+}
+// Revalida no clique, inclusive quando uma aba ficou suspensa na transição.
+document.querySelectorAll('[data-purchase]').forEach(el => {
+  const validar = event => {
+    atualizarOferta();
+    if (!el.hasAttribute('href')) event.preventDefault();
+  };
+  el.addEventListener('click', validar);
+  el.addEventListener('auxclick', validar);
+});
+document.getElementById('aviso-texto').textContent = CONFIG_OFERTA.lembrete.aviso;
+document.getElementById('salvar-lembrete').addEventListener('click', () => {
+  const utc = value => new Date(value).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  const escapeICS = value => value.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/[,;]/g, '\\$&');
+  const evento = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//IA PARA PSICOLOGOS//PT-BR','BEGIN:VEVENT','UID:ia-psicologos-20261013@landing.local','DTSTAMP:' + utc(Date.now()),'DTSTART:' + utc(CONFIG_OFERTA.lancamento),'DTEND:' + utc(Date.parse(CONFIG_OFERTA.lancamento) + 3600000),'SUMMARY:' + escapeICS(CONFIG_OFERTA.lembrete.titulo),'DESCRIPTION:' + escapeICS(CONFIG_OFERTA.lembrete.descricao),'BEGIN:VALARM','TRIGGER:-PT15M','ACTION:DISPLAY','DESCRIPTION:Lançamento em 15 minutos','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const url = URL.createObjectURL(new Blob([evento], {type: 'text/calendar;charset=utf-8'}));
+  const link = document.createElement('a'); link.href = url; link.download = 'lancamento-ia-para-psicologos.ics'; link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+});
+atualizarOferta();
+setInterval(atualizarOferta,1000);
+document.addEventListener('visibilitychange',atualizarOferta);
+window.addEventListener('pageshow',atualizarOferta);
+</script>
+</body>
+</html>
